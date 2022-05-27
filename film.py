@@ -10,21 +10,21 @@ class film:
         self.genres = genres
         self.poster_url = poster_url
 
-    def print_film(self):
+    def output_film(self):
         film_output = ""
-        film_output += f"Название: {self.name_original[0]} ({self.name_russian[0]})\n"
-        film_output += f"Рейтинг на IMDb: {self.rating_imdb[0]}\n"
-        film_output += f"Время: {self.time[0]} мин.\n"
-        film_output += f"Возраст: {self.age_restriction[0]}+.\n"
-        film_output += f"Тип: {self.type[0]}\n"
-        film_output += "Жанр: "
+        film_output += f"<b>Название:</b> {self.name_original[0]} ({self.name_russian[0]})\n"
+        film_output += f"<b>Рейтинг на IMDb:</b> {self.rating_imdb[0]}\n"
+        film_output += f"<b>Время:</b> {self.time[0]} мин.\n"
+        film_output += f"<b>Возраст:</b> {self.age_restriction[0]}+.\n"
+        film_output += f"<b>Тип:</b> {self.type[0]}\n"
+        film_output += "<b>Жанр:</b> "
 
         for i in range(len(self.genres)):
             if i != len(self.genres)-1:
                 film_output += f"{self.genres[i]}, "
             else:
-                film_output += f"{self.genres[i]}\n"
+                film_output += f"{self.genres[i]}\n\n"
 
-        film_output += f"Описание: {self.description[0]}"
+        film_output += f"<b>Описание:</b> {self.description[0]}"
 
-        print(film_output)
+        return film_output

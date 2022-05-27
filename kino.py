@@ -34,6 +34,3 @@ def get_random_film():
     )
 
     return random_rilm
-
-film = get_random_film()
-film.print_film()

@@ -12,8 +12,8 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=settings.TOKEN)
 dp = Dispatcher(bot)
 
-def bot_run(dispatcher, skip_update=True):
-    executor.start_polling(dp, skip_updates=skip_update)
+def bot_run(dispatcher, skip_updates=True):
+    executor.start_polling(dp, skip_updates=skip_updates)
 
 if __name__ == "__main__":
     bot_run(dispatcher=dp)
